@@ -2,8 +2,8 @@
 FROM ruby:2.5
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
 WORKDIR /API_people
-COPY Gemfile /API_people//Gemfile
-COPY Gemfile.lock /API_people//Gemfile.lock
+COPY Gemfile /API_people/Gemfile
+COPY Gemfile.lock /API_people/Gemfile.lock
 RUN bundle install
 
 # Add a script to be executed every time the container starts.
